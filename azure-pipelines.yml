@@ -10,21 +10,15 @@ steps:
     targetType: 'inline'
     script: |
       git clone https://github.com/NithishaManyam/maven3.git
-
-
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: 'cd /home/azureuser/_work/1/s;mvn package'
-
-
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
       scp /home/azureuser/_work/1/s/webapp/target/webapp.war azureuser@20.5.11.28:/var/lib/tomcat10/webapps/testapp.war
-
-
 - task: Bash@3
   inputs:
     targetType: 'inline'
@@ -34,7 +28,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'java -jar /home/azureuser/_work/1/s/FunctionalTesting/testing.jar'
-
 - task: Bash@3
   inputs:
     targetType: 'inline'
