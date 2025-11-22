@@ -31,5 +31,5 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'scp /home/azureuser/_work/1/s/webapp/target/webapp.war azureuser@9.223.177.10:/var/lib/tomcat10/webapps/prodapp.war'
-    
+    script: 
+       scp /home/azureuser/_work/1/s/webapp/target/webapp.war azureuser@9.223.177.10:/var/lib/tomcat10/webapps/prodapp.war
